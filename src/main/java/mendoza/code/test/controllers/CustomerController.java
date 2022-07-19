@@ -19,11 +19,11 @@ import java.util.Arrays;
 import java.util.List;
 
 @RestController
-@RequestMapping("/customermanager")
-@Api(value="customermanager", description="CRUD for Customer")
+@RequestMapping("/customers")
+@Api(value="customers", description="CRUD for Customers")
 public class CustomerController {
 
-	@ApiOperation(value = "View a list of Customers",response = Iterable.class)
+	@ApiOperation(value = "Get a list of Customers",response = Iterable.class)
 	@ApiResponses(value = {
 			@ApiResponse(code = 200, message = "Successfully retrieved list"),
 			@ApiResponse(code = 401, message = "You are not authorized to view the resource"),
@@ -31,8 +31,8 @@ public class CustomerController {
 			@ApiResponse(code = 404, message = "The resource you were trying to reach is not found")
 	}
 	)
-	@RequestMapping(value = "/list", method= RequestMethod.GET, produces = { "application/json", "application/xml", "text/xml" })
-	public List<String> list(Model model){
+	@RequestMapping(value = "/", method= RequestMethod.GET, produces = { "application/json", "application/xml", "text/xml" })
+	public List<String> getCustomers(Model model){
 		List<String> productList = Arrays.asList("product1", "product2");
 		return productList;
 	}
