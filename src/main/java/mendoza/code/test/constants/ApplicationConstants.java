@@ -11,4 +11,8 @@ public class ApplicationConstants {
     public static final String SWAGGER_REGEX_MANAGER = "/api.*";
     public static final String SWAGGER_TITLE = "\"Customer Manager REST API\"";
     public static final String SWAGGER_DESCRIPTION = "\"\\\"Code Test Showing a REST API with CRUD with Persistence\\\"\"";
+
+    public static final String ADMIN_ROLE = "admin";
+
+    public static final String RESPONSE_SUCCESS = "SUCCESS";
 }
