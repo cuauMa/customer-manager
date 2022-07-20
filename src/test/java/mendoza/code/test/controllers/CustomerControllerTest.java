@@ -43,7 +43,7 @@ public class CustomerControllerTest {
 
         when(customerManagerService.getCustomers()).thenReturn(customerList);
 
-        mockMvc.perform(MockMvcRequestBuilders.get("/customers/get")
+        mockMvc.perform(MockMvcRequestBuilders.get("/customers/")
                 .contentType(MediaType.APPLICATION_JSON)
         ).andExpect(jsonPath("$", hasSize(2))).andDo(print());
     }

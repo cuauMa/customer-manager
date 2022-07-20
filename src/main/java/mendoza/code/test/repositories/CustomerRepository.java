@@ -10,7 +10,12 @@ import mendoza.code.test.models.Customer;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+import java.util.Optional;
+
 @Repository("customerRepository")
 public interface CustomerRepository extends CrudRepository<Customer, Long> {
+
+    List<Customer> findByCustomerUser(String customerUser);
 
 }
