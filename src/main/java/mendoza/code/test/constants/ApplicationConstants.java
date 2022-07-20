@@ -8,7 +8,7 @@ package mendoza.code.test.constants;
 
 public class ApplicationConstants {
     public static final String SWAGGER_PACKAGE_NAME = "mendoza.code.test";
-    public static final String SWAGGER_REGEX_MANAGER = "/customermanager.*";
+    public static final String SWAGGER_REGEX_MANAGER = "/api.*";
     public static final String SWAGGER_TITLE = "\"Customer Manager REST API\"";
     public static final String SWAGGER_DESCRIPTION = "\"\\\"Code Test Showing a REST API with CRUD with Persistence\\\"\"";
 }
