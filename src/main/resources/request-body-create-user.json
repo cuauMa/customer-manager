@@ -1,0 +1,30 @@
+{
+  "customerUser": "username new",
+  "customerName": "customer new",
+  "addresses": [
+    {
+      "addressTagName": "mailing post",
+      "addressLine1": "known street",
+      "addressLine2": "sunset district",
+      "zipCode": "94116",
+      "addressState": "CA",
+      "addressCountry": "USA"
+    },
+    {
+      "addressTagName": "billing address",
+      "addressLine1": "known street",
+      "addressLine2": "sunset district",
+      "zipCode": "94116",
+      "addressState": "CA",
+      "addressCountry": "USA"
+    },
+    {
+      "addressTagName": "business address",
+      "addressLine1": "known street",
+      "addressLine2": "sunset district",
+      "zipCode": "94116",
+      "addressState": "CA",
+      "addressCountry": "USA"
+    }
+  ]
+}

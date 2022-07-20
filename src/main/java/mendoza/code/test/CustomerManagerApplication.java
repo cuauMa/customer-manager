@@ -45,13 +45,22 @@ public class CustomerManagerApplication {
 			log.info("Address added to Set");
 			customer1.setAddresses(addressSet);
 			customerRepository.save(customer1);
-//			Customer customer2 = new Customer("username2", "customer name 2");
-//			customer2.setAddresses(addressSet);
-//			customerRepository.save(customer2);
+			addressSet = new HashSet<>();
+			address = new Address("mailing post",
+					"known street",
+					"sunset district","45080","JAL","Mexico"  );
+			addressSet.add(address);
+			Customer customer2 = new Customer("username2", "customer name 2");
+			address.setCustomer(customer2);
+			customer2.setAddresses(addressSet);
+			customerRepository.save(customer2);
 
 			log.info("Check Customers are stored ");
 			log.info("--------------------------");
-			customerRepository.findAll().forEach(customer-> log.info("customer = " + customer));
+			customerRepository.findAll().forEach(customer-> {
+				log.info("customer = " + customer);
+				log.info("address " + customer.getAddresses().toString());
+			});
 			log.info("");
 
 			Customer customer = customerRepository.findById(1L).get();

@@ -12,6 +12,13 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public interface CustomerManagerService {
+public interface CustomerService {
     public List<Customer> getCustomers();
+    public Customer getCustomer(Long customerId);
+
+    public void createCustomer(Customer customer);
+
+    public void updateCustomer(Long customerId, Customer newCustomer);
+
+    public void deleteCustomer(Long customerID);
 }

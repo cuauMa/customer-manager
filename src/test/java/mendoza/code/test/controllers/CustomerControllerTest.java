@@ -7,7 +7,7 @@
 package mendoza.code.test.controllers;
 
 import mendoza.code.test.models.Customer;
-import mendoza.code.test.services.CustomerManagerService;
+import mendoza.code.test.services.CustomerService;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
@@ -34,16 +34,16 @@ public class CustomerControllerTest {
     MockMvc mockMvc;
 
     @MockBean
-    CustomerManagerService customerManagerService;
+    CustomerService customerManagerService;
 
     @Test
     public void testGetCustomers() throws Exception {
-       List<Customer> customerList = List.of(new Customer("customeruser1", "name1"),
-                new Customer("customeruser2", "name2"));
+       List<Customer> customerList = List.of(new Customer("test-customerUser1", "test-customerName1"),
+                new Customer("test-customerUser2", "test-customerName2"));
 
         when(customerManagerService.getCustomers()).thenReturn(customerList);
 
-        mockMvc.perform(MockMvcRequestBuilders.get("/customers/")
+        mockMvc.perform(MockMvcRequestBuilders.get("/api/customers/")
                 .contentType(MediaType.APPLICATION_JSON)
         ).andExpect(jsonPath("$", hasSize(2))).andDo(print());
     }
